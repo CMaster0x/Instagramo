@@ -1,0 +1,12 @@
+<h1>Create post</h1>
+<%= form_with(model: @post) do  |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </br>
+
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  </br>
+
+  <%= f.submit %>
+<% end %>

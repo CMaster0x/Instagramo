@@ -1,0 +1,15 @@
+<h1><%= @user.email %></h1>
+
+<div class="info-container">
+  <% if !current_user.follows?(@user) %>
+    <%= form_with(model: @user, url: follower_path(@user)) do |f| %>
+      <%= f.submit 'Follow' %>
+    <% end %>
+  <% elsif  current_user.id !=  @user.id %>
+    <%= form_with(model: @user, url: follower_path(@user), method: :delete) do |f| %>
+      <%= f.submit 'Unfollow me!' %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= render 'posts/posts/' %>

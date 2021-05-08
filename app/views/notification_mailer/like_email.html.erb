@@ -1,0 +1,3 @@
+<p>
+  <%= link_to(@notification.sender.email, user_url(@notification.sender.id)) %> liked your <%= link_to('post', post_url(@notification.recipient.id)) %> 
+</p>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instagramo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <% if current_user %>
+        <%= link_to '1', notifications_path %>
+        <%= link_to 'Sign Out', sign_out_path, method: :delete %>
+        <% end %> 
+    </header> 
+   
+    <%= yield %>
+  </body>
+</html>

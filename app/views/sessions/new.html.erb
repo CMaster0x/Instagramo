@@ -1,0 +1,12 @@
+ <h1>Inicia sesión</h1>
+  <%= form_with(model: @user, url: sign_in_path) do  |f| %>
+     <%= f.label :email %>
+     <%= f.email_field :email %>
+     </br>
+     <%= f.label :password %>
+     <%= f.password_field :password %>
+    </br>
+  
+    <%= f.submit 'Sign in' %>
+    <p>Not a user?</p><%= link_to 'Sign up', sign_up_path %>
+<% end %>

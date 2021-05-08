@@ -1,0 +1,14 @@
+<h1>Crea tu cuenta</h1>
+<%= form_with(model: @user, url: sign_up_path) do  |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  </br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  </br>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  </br>
+  <%= f.submit 'Sign up' %>
+<% end %>

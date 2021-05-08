@@ -1,0 +1,29 @@
+<article class="post-container">
+  <div class= "post-image">
+    <%= image_tag(url_for(post.square_image))%>
+  </div>
+
+  <div class="posts-likes">
+    <% if current_user.liked?(post) %>
+      <% like = post.likes.find_by(user: current_user) %>
+      <%= form_with(url: like_path(like), method: :delete) do |f| %>
+        <%= f.submit 'Unlike' %>
+      <% end %>
+    <% else %> 
+      <%= form_with(model: post.likes.new) do |f| %>
+        <%= f.hidden_field :likeable_type %>
+        <%= f.hidden_field :likeable_id %>
+          <%= f.submit 'Like' %>
+        <% end %>
+    <% end %>
+
+    <% if post.likes.count.positive? %>
+      <strong><%= post.likes.count %></strong>
+    <% end %>
+  </div>
+
+  <div class="post-details">
+    <p class="post-user"><%= link_to(post.user.email, user_path(post.user_id)) %></p>
+    <p class="post-title"><%== hashtag_linkeable(post.title) %></p>
+  </div>
+</section>

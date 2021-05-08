@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+   margin: 42px;
+ }
+
+ .header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.post-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 0.5em;
+  border: thin silver solid;
+  border-bottom: none;
+}
+
+.posts-likes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 0.5em;
+  border: thin silver solid;
+  border-bottom: none;
+}
+
+.posts-user {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-bottom: none;
+  
+}
+
+.post-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-bottom: none;
+  margin: 0.5em;
+  padding: 0.5em; 
+}
+
+.post-details {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 0.5em;
+}
+
+.create{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.info-container{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
